@@ -1,0 +1,157 @@
+table{
+border-collapse: collapse;
+}
+
+.water{
+    background-color: blue;
+    text-indent: -9999px;
+    width: 40px;
+    height: 40px;
+    border: black;
+    border-style: solid;
+    border-color: black;
+}
+.water:hover{
+    background: orange;
+}
+.normal:hover{
+    background: red;
+    }
+
+.boxTitle{
+ background-color: white;
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-color: black;
+}
+
+.cruiser{
+    background-color: red;
+    text-indent: -9999px;
+    width: 40px;
+    height: 40px;
+    border: black;
+    border-style: solid;
+    border-color: black;
+}
+
+.destroyer{
+    background-color: yellow;
+    text-indent: -9999px;
+    width: 40px;
+    height: 40px;
+    border: black;
+    border-style: solid;
+    border-color: black;
+}
+
+.battleship{
+    background-color: green;
+    text-indent: -9999px;
+    width: 40px;
+    height: 40px;
+    border: black;
+    border-style: solid;
+    border-color: black;
+}
+
+.salvo{
+       background-color: orange;
+       text-indent: -9999px;
+       width: 40px;
+       height: 40px;
+       border: black;
+       border-style: solid;
+       border-color: black;
+
+}
+.hits{
+        background-color: red;
+        text-indent: -9999px;
+        width: 40px;
+        height: 40px;
+        border: black;
+        border-style: solid;
+        border-color: black;
+
+}
+
+.normal{
+background-color: white;
+text-indent: -9999px;
+    width: 40px;
+    height: 40px;
+    border: black;
+    border-style: solid;
+    border-color: black;
+}
+
+.salvoOut{
+background-image: url("icons8-happy-50.png") ;
+background-position: center;
+       padding: 3px;
+       width: 40px;
+       height: 40px;
+       border: black;
+       border-style: solid;
+       border-color: black;
+}
+.salvoIn{
+background-image: url("icons8-sad-50.png") ;
+background-position: center;
+       padding: 3px;
+       width: 40px;
+       height: 40px;
+       border: black;
+       border-style: solid;
+       border-color: black;
+}
+.destroyerDiv{
+    background-color: yellow;
+    width: 80px;
+    height: 40px;
+}
+.destroyerDivVer{
+    background-color: yellow;
+    width: 40px;
+    height: 80px;
+}
+.cruiserDiv{
+    background-color: red;
+    width: 120px;
+    height: 40px;
+}
+.cruiserDivVer{
+    background-color: red;
+    width: 40px;
+    height: 120px;
+}
+.battleShipDiv{
+    background-color: green;
+    width: 120px;
+    height: 40px;
+}
+.battleShipDivVer{
+    background-color: green;
+    width: 40px;
+    height: 120px;
+}
+.destroyerDiv:hover{
+    background-color: orange;
+}
+.destroyerDivVer:hover{
+     background-color: orange;
+ }
+.cruiserDiv:hover{
+    background-color: orange;
+}
+.cruiserDivVer:hover{
+    background-color: orange;
+}
+.battleShipDiv:hover{
+    background-color: orange;
+}
+.battleShipDivVer:hover{
+    background-color: orange;
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ship Locations!</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body>
+
+<div id="vue-app">
+    <h1>{{game.finish}}</h1>
+    <h1 id="gameStatus">{{game.status}}</h1>
+    <div id="boatsDiv">
+    <h1>Boats</h1>
+    <div id="destroyer" class="destroyerDiv" @click="setShipType({name: 'destroyer', length: 2})"></div>
+    <input id="destroyerCheck" type="checkbox" @click="vertical('destroyer')">
+    <div id="cruiser" class="cruiserDiv" @click="setShipType({name: 'cruiser', length: 3})" ></div>
+    <input id="cruiserCheck" type="checkbox" @click="vertical('cruiser')">
+    <div id="battleship" class="battleShipDiv" @click="setShipType({name: 'battleship', length: 3})" ></div >
+    <input id="battleshipCheck" type="checkbox" @click="vertical('battleship')">
+    <button id="sendShips" @click="sendShips">Send Ships</button>
+    <button id="sendSalvos" @click="sendSalvos">Send Salvos</button>
+    </div>
+    <div id="tableBoats">
+<table>
+    <thead>
+    <tr>
+        <th class="boxTitle"></th>
+        <th class="boxTitle" v-for="table in tableX" >{{ table }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr v-for="table in tableY">
+        <th class="boxTitle">{{table}}</th>
+        <td class="water" v-for="td in tableX" @click="setShip(table ,td)">{{ table }}{{ td }}</td>
+    </tr>
+
+    </tbody>
+
+</table >
+</div>
+    <div id="tableDiv">
+    <div><h2>Rival Boats</h2></div>
+    <div><h4>Boats Life</h4></div>
+    <div><h4>Cruiser {{game.cruiserLife}}</h4></div>
+    <div><h4>Destroyer {{game.destroyerLife}}</h4></div>
+    <div><h4>Battleship {{game.battleshipLife}}</h4></div>
+
+    <div><h2>Me Boats</h2></div>
+    <div><h4>Boats Life</h4></div>
+    <div><h4>Cruiser {{game.meCruiserLife}}</h4></div>
+    <div><h4>Destroyer {{game.meDestroyerLife}}</h4></div>
+    <div><h4>Battleship {{game.meBattleshipLife}}</h4></div>
+
+    <h2>Turn {{game.meTurn}}</h2>
+    </div>
+    <div id="tableSalvos">
+    <h1>Salvos</h1>
+<table>
+    <thead>
+
+    <tr>
+        <th class="boxTitle"></th>
+        <th class="boxTitle" v-for="table in tableX">{{ table }}</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr v-for="table in tableY">
+        <th class="boxTitle">{{table}}</th>
+        <td class="normal" v-for="td in tableX" @click="setSalvo(table ,td)">{{ table }}{{ td }}</td>
+    </tr>
+
+
+    </tbody>
+</table>
+
+    </div>
+
+
+</div>
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

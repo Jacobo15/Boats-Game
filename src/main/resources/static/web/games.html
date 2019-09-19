@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Salvo!</title>
+</head>
+<body>
+<div id="vue-app">
+
+
+    <form id="login-form" onsubmit="return false">
+        <label>Email: <input type="text" v-model="email"></label>
+        <label>Password: <input type="text" v-model="password"></label>
+        <button  @click="loginPlayer">Log in</button>
+    </form>
+
+    <form id="logout-form" onsubmit="return false">
+        <button @click="logoutPlayer">Log Out</button>
+    </form>
+
+    <a id="register" href="../web/register.html">Registration</a>
+
+<ol>
+    <li v-for="data in games">{{ data.dataGame }} <button  v-if="myGame(data.gamePlayers)"><a @click="thatGame(data.gamePlayers)">Rejoin game</a></button><button :id="data.id" @click="joinGame(data.id)"><a>Join Game</a></button> </li>
+    <button @click="createGame">Create New Game</button>
+</ol>
+
+    <table id="myTable">
+        <thead>
+        <tr>
+            <th>Players</th>
+            <th>Total</th>
+            <th>Won</th>
+            <th>Lost</th>
+            <th>Tied</th>
+        </tr>
+        </thead>
+        <tbody >
+        <tr v-for="player in players">
+            <td>{{ player.Name }}</td>
+            <td>{{ player.Total }}</td>
+            <td>{{ player.Win }}</td>
+            <td>{{ player.Loss }}</td>
+            <td>{{ player.Tied }}</td>
+        </tr>
+        </tbody>
+
+    </table>
+
+</div>
+<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="games.js"></script>
+
+</body>
+</html>
